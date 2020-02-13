@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.hyd.vocabulary.MainController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <center>
+        <SplitPane dividerPositions="0.25">
+            <VBox style="-fx-padding: 5" spacing="5">
+                <Label text="单词列表："/>
+                <ListView VBox.vgrow="ALWAYS" fx:id="lstWords"/>
+            </VBox>
+            <VBox style="-fx-padding: 5" spacing="5">
+                <ScrollPane VBox.vgrow="ALWAYS" style="-fx-background: #FFFFFF" fitToWidth="true">
+                    <VBox spacing="10" style="-fx-padding: 10">
+                        <Label style="-fx-font-size: 28" fx:id="lblWord" text="a"/>
+                        <Label style="-fx-font-size: 16" fx:id="lblPronounce" text="ə; eɪ"/>
+                        <Label style="-fx-font-size: 16" fx:id="lblChinese" text="一(个)；每一(个)"/>
+                        <Separator/>
+                        <Label style="-fx-font-size: 16; -fx-text-fill: #3366FF" text="例句："/>
+                        <VBox spacing="10" fx:id="samplesPane">
+                            <VBox>
+                                <Label style="-fx-font-size: 20" text="We have a problem."/>
+                                <Label style="-fx-font-size: 16" text="我们遇到了一个麻烦。"/>
+                            </VBox>
+                            <VBox>
+                                <Label style="-fx-font-size: 20" text="We have a problem."/>
+                                <Label style="-fx-font-size: 16" text="我们遇到了一个麻烦。"/>
+                            </VBox>
+                            <VBox>
+                                <Label style="-fx-font-size: 20" text="We have a problem."/>
+                                <Label style="-fx-font-size: 16" text="我们遇到了一个麻烦。"/>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+                </ScrollPane>
+                <HBox alignment="CENTER_RIGHT" spacing="5">
+                    <Button text="上一个单词"/>
+                    <Button text="下一个单词"/>
+                </HBox>
+            </VBox>
+        </SplitPane>
+    </center>
+</BorderPane>
